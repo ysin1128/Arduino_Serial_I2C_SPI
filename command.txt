@@ -1,0 +1,40 @@
+Command Option I2C_Address Data1 Data2 ...
+
+Command:
+0xA5	I2C Write
+0xAA	I2C Read
+0x55	GPO Control
+0x5A	SPI
+0xC3	Pattern
+0x69	Clock
+0x96	Config	
+
+Option:
+Command = 
+0xA5		ignored (necessary)
+0xAA		Data Length
+0x55		Interval[15:8] [msec]
+0x5A		[7:6] Free, [5] Bit Order: 0=MSB First, 1=LSB First, [4:2] Clock Divider: 0=1/2, ..., 6=1/128, [1:0] SPI Mode: 0=Mode0, ..., 3=Mode3
+0xC3		0=Disable pattern output, 1=Enable pattern output
+0x69		Clock Period[15:8] [clk of Int CLK] (Clock Period = 0 -> Clock stops)
+0x96		Item: 0=none, 1=analogReference, 2=SCL/SCK pull-up, 3=I2C Freq, 4=unit or delay time for 0xC3,
+
+I2C_Address:
+Command=
+0xA5		[7] 0 (fixed), [6:0] 7-bit address
+0xAA		[7] 0 (fixed), [6:0] 7-bit address
+0x55		Interval[7:0] [msec]
+0x5A		Data
+0xC3		Repeat count, 0x00=Continuous mode
+0x69		Clock Period[7:0] [clk of Int CLK]
+0x96		Parameter
+
+Data:
+Command = 
+0xA5		Regigter Address, Data
+0xAA		not needed
+0x55		6ch GPO Status (xx76_5432) 0 = Low, 1 = High
+0x5A		Data
+0xC3		not needed
+0x69		Data1 = High Width[15:8], Data2 = High Width[7:0] [clk of Int CLK], If Data1/2 are not sent, High Width becomes the half of Clock Period. 
+0x96		not needed
