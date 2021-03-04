@@ -1,18 +1,11 @@
 # Arduino_Serial_I2C_SPI
 Sketch to use Arduino as I2C/SPI tool with Serial I/F. 
 
-Latest Sketch for Windows / Android app: sketch_I2C_SPI_bin_R12.ino
+Latest Sketch for Windows / Android app: sketch_I2C_SPI_bin_R13.ino
 
 for Windows App ver. 5.0 or Later
 
 for Android App ver. 3.0 or Later
-
-
-Old Sketch for Windows / Android app: sketch_I2C_SPI_bin_R10.ino
-
-for Windows App ver. 4.2
-
-for Android App ver. 2.1
 
 
 Windows app and Android app are available. 
