@@ -8,6 +8,7 @@ for Windows App ver. 5.0 or Later
 for Android App ver. 3.0 or Later
 
 
+
 Windows app and Android app are available. 
 
 Website (Japanese): https://ysin1128.hatenablog.com/entry/2020/02/23/173147
