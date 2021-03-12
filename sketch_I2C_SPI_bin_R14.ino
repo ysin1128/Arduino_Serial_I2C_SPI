@@ -71,7 +71,7 @@ void setup() {
   PAT_RPT = 0;
   PAT_CYC = 0;
 
-  for(i=0;i<256;i++){
+  for(i=0;i<128;i++){
     PAT[i] = 0;
   }
 
